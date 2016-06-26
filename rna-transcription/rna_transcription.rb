@@ -1,9 +1,7 @@
-require 'pry'
 class Complement
   class << self
 
     def of_dna(genome)
-      binding.pry
       genome_length(genome) || ''
     end
 
@@ -28,10 +26,9 @@ class Complement
     end
 
     def genome_reassignment(genome)
-      genome.chars.reduce([]) do |new_strand, genome_strand|
+      genome.chars.reduce("") do |new_strand, genome_strand|
         new_strand << strand_matchup[genome_strand]
-        new_strand
-      end.join
+      end
     end
   end
 end
