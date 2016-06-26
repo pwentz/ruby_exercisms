@@ -10,6 +10,23 @@ class Raindrops
       make_sound(number)
     end
 
+    ## BETTER, SHORTER VERSION
+    #def convert(number)
+      #unless raindrops(number).empty?
+        #raindrops(number)
+      #else
+        #number.to_s
+      #end
+    #end
+#
+    #def raindrops(number)
+      #a = {3 => "Pling", 5 => "Plang", 7 => "Plong"}
+      #a.reduce("") do |num, pair|
+        #num << pair.last if (number % pair.first).zero?
+        #num
+      #end
+    #end
+
     def make_sound(number)
       unless raindrops.empty?
         raindrops
